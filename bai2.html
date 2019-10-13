@@ -6,25 +6,17 @@
 </head>
 <body>
 <script>
-let x = prompt("Nhập vào một  chuỗi ");
-let str = x.toString();
-let result = [str[0]];
-
-for (let i=0; i<str.length; i++)
-{
-    if ((str[i]%2 === 0)&&(str[i+1]%2 === 0))
-    {
-        result.push('-',str[i+1]);
+    let  num = window.prompt();
+    let str = num.toString();
+    let result = [str[0]];
+    for (let x = 1; x < str.length; x++ ) {
+        if (str[x - 1] % 2 === 0 && str[x] % 2 === 0) {
+            result.push('-', str[x]);
+        } else {
+            result.push(str[x]);
+        }
     }
-    else
-    {
-        result.push(str[i+1]);
-    }
-}
-document.write(result.join(''));
-
-
-
+    console.log(result.join(" "));
 </script>
 </body>
 </html>
